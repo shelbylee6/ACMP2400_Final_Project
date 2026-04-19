@@ -1,4 +1,4 @@
-Dname: Build-Curl
+name: Build-Curl
 on: 
   workflow_dispatch
 permissions: {}
