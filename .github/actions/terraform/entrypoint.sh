@@ -10,5 +10,6 @@ export TF_STAGE=${INPUT_TF_STAGE}
 
 cd /github/workspace/.github/actions/terraform/stage1
 
+terraform init
 terraform plan
 terraform apply --auto-approve
