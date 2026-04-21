@@ -23,10 +23,4 @@ inputs:
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  env:                                                   
-    INPUT_ARM_CLIENT_ID: ${{ inputs.ARM_CLIENT_ID }}
-    INPUT_ARM_CLIENT_SECRET: ${{ inputs.ARM_CLIENT_SECRET }}
-    INPUT_ARM_SUBSCRIPTION_ID: ${{ inputs.ARM_SUBSCRIPTION_ID }}
-    INPUT_ARM_TENANT_ID: ${{ inputs.ARM_TENANT_ID }}
-    INPUT_STATE_KEY: ${{ inputs.STATE_KEY }}
-    INPUT_TF_STAGE: ${{ inputs.TF_STAGE }}
+  
