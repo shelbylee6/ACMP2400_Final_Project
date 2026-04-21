@@ -8,6 +8,13 @@ export ARM_TENANT_ID=${INPUT_ARM_TENANT_ID}
 export STATE_KEY=${INPUT_STATE_KEY}
 export TF_STAGE=${INPUT_TF_STAGE}
 
+az login --service-principal \
+  --username $ARM_CLIENT_ID \
+  --password $ARM_CLIENT_SECRET \
+  --tenant $ARM_TENANT_ID
+
+az account set --subscription $ARM_SUBSCRIPTION_ID
+
 cd /github/workspace/.github/actions/terraform/${TF_STAGE}
 
 terraform init -backend-config="key=${STATE_KEY}.tfstate" -input=false
