@@ -2,9 +2,7 @@ FROM ubuntu:latest@sha256:c4a8d5503dfb2a3eb8ab5f807da5bc69a85730fb49b5cfca233019
 
 #install TF
 RUN apt-get update && apt-get install -y --no-install-recommends gnupg software-properties-common wget 
-#curl ca-certificates lsb-release
 
-#RUN curl -sL https://aka.ms/InstallAzureCLIDeb | bash
 
 RUN wget -O - https://apt.releases.hashicorp.com/gpg | gpg --dearmor -o /usr/share/keyrings/hashicorp-archive-keyring.gpg
 
@@ -14,8 +12,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends terraform
 
 WORKDIR /app
 
-COPY entrypoint.sh /entrypoint.sh 
+COPY entrypoint.sh .
 
-RUN chmod +x /entrypoint.sh
-
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["entrypoint.sh"]
