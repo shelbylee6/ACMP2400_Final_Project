@@ -9,6 +9,7 @@ terraform {
     resource_group_name = "rg-acmp-final"
     storage_account_name = "acmp2400storageaccount"
     container_name = "big-tf-state-amcp2400"
+    use_azread_auth = true
   }
 }
 
@@ -17,7 +18,7 @@ provider "azurerm" {
 }
 
 resource "azurerm_container_registry" "student-acr" {
-  name = "acrshelbyleeacmp2400"
+  name = "acrshelbylee"
   resource_group_name = "rg-shelbylee"
   location = "Central US"
   sku = "Basic"
