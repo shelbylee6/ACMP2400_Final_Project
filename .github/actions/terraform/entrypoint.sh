@@ -11,8 +11,6 @@ export TF_STAGE=${INPUT_TF_STAGE}
 
 
 
-terraform plan
-terraform apply --auto-approve
 
 terraform -chdir=${INPUT_TF_STAGE} init -backend-config="key=${INPUT_STATE_KEY}.tfstate"
 terraform -chdir=${INPUT_TF_STAGE} plan -out=${INPUT_TF_STAGE}.tfplan
