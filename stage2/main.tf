@@ -41,7 +41,7 @@ resource "azurerm_container_group" "shelbylee-aci" {
 
   container {
     name = "final"
-    image "acrshelbyleeacmp2400.azurecr.io/final:latest"
+    image = "acrshelbyleeacmp2400.azurecr.io/final:latest"
     cpu = "0.5"
     memory = "1.5"
 
