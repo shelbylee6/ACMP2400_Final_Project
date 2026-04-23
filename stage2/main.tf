@@ -1,6 +1,6 @@
-variable ARM_CLIENT_ID {}
-variable ARM_CLIENT_SECRET {}
-variable DJANGO_SECRET_KEY {}
+variable "ARM_CLIENT_ID" {}
+variable "ARM_CLIENT_SECRET" {}
+variable "DJANGO_SECRET_KEY_PROD" {}
 
 
 
@@ -51,7 +51,7 @@ resource "azurerm_container_group" "shelbylee-aci" {
     }
 
     secure_environment_variables = {
-      DJANGO_SECRET_KEY = var.DJANGO_SECRET_KEY
+      DJANGO_SECRET_KEY = var.DJANGO_SECRET_KEY_PROD
     }
   }
     image_registry_credential {
