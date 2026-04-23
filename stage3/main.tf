@@ -17,10 +17,4 @@ provider "azurerm" {
   features {}
 }
 
-resource "azurerm_container_registry" "student-acr" {
-  name = "acrshelbyleeacmp2400"
-  resource_group_name = "rg-shelbylee"
-  location = "Central US"
-  sku = "Basic"
-  admin_enabled = false
-}
+
