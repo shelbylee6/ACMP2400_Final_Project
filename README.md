@@ -65,9 +65,13 @@ Best Practices applied:
 - Actions use verified/offical actions where possible
 
 # Deployment 
+
 The application is deployed to Azure and accessible at: http://your-public-domain:8000
 To trigger a deployment, push to the main branch. The GitHub Actions pipeline will automatically build, scan, provision infrastructure, and deploy the updated application. 
 
+# AI Disclosure
+
+AI was used in this project to help assist debugging, mainly finding syntax errors and assisting/editing the README.md to ensure the project meets the rubric requirements. All code was written and verified by myself and no secrets or vulnerable information was diclosed to any AI tool. 
 
 
 
