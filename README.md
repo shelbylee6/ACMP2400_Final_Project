@@ -64,6 +64,8 @@ Best Practices applied:
 - Triggers use push and pull request - no unauthenticated workflow dispatch
 - Actions use verified/offical actions where possible
 
+Note on workflow trigger: This pipeline uses workflow_dispatch intentionally. Because each run provisions and destroys live cloud infrastructure, automatic triggering on every push would cause unnecessary cloud costs and uncontrolled resource churn during development. Manual invocation ensures deliberate control over when infrastructure is deployed.
+
 # Deployment 
 
 The application is deployed to Azure and accessible at: http://your-public-domain:8000
